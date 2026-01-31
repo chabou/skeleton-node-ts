@@ -1,2 +1,1 @@
-const todo = 42
-console.log(todo)
+console.log("Hello from ts-skeleton");

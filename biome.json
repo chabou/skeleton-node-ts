@@ -1,0 +1,23 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.3.13/schema.json",
+	"files": {
+		"includes": ["**", "!dist", "!.claude"]
+	},
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		}
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	}
+}

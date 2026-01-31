@@ -1,25 +1,31 @@
 {
-  "name": "nightswatch",
-  "version": "1.0.0",
-  "main": "src/index.js",
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {
-    "@types/node": "14.14.7",
-    "@typescript-eslint/eslint-plugin": "4.7.0",
-    "@typescript-eslint/parser": "4.7.0",
-    "eslint": "7.13.0",
-    "eslint-config-prettier": "6.15.0",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-prettier": "3.1.4",
-    "prettier": "2.1.2",
-    "ts-node": "9.0.0",
-    "ts-node-dev": "1.0.0",
-    "typescript": "4.0.5"
-  },
-  "scripts": {
-    "start": "yarn build && node build/index.js",
-    "build": "tsc",
-    "dev": "ts-node-dev src/index.ts"
-  }
+	"name": "ts-skeleton",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"main": "dist/index.js",
+	"scripts": {
+		"dev": "tsx watch src/index.ts",
+		"build": "tsup",
+		"start": "node dist/index.js",
+		"check": "biome check .",
+		"check:fix": "biome check --fix .",
+		"typecheck": "tsc --noEmit"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.25.0",
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.13",
+		"@types/node": "^25.1.0",
+		"tsup": "^8.5.1",
+		"tsx": "^4.21.0",
+		"typescript": "^5.9.3"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	}
 }
